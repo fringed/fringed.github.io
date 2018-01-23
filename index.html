@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+
+ <title>Search paintings</title>
+ <link rel="stylesheet" type="text/css" href="sam.css">
+
+ <style>
+ </style>
+
+
+
+
+<!-- GOOGLE API   AIzaSyDNDmSU-R9ZLv_2kheAhwDN-CHEG5nuwe4    -->
+ <!--<form method="get" action="http://www.google.com/search">
+ </form>-->
+
+
+
+ <!--<script src="https://www.google.com/uds/api?file=uds.js&v=1.0&key=AIzaSyDNDmSU-R9ZLv_2kheAhwDN-CHEG5nuwe4" type="text/javascript">-->
+
+ <script language="Javascript" type="text/javascript">
+
+  function Myfunction()
+  {
+    var x = document.getElementById("shadows").value;
+    //document.getElementById("para2").innerHTML = x;
+
+    var xmlHttp = new XMLHttpRequest();
+
+
+    document.getElementById("para2").innerHTML = Url;
+    xmlHttp.open( "GET", Url, false );
+
+   // xmlHttp.send( null );
+    Url="https://www.google.co.in/search?q=paintings+of+" + x ;
+
+    return xmlHttp.responseText;
+
+    /*xmlHttp.onreadystatechange = function()
+    {
+
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+        { document.getElementById("para2").innerHTML = x;
+            callback(xmlHttp.responseText);}
+    }
+    Url="https://www.google.co.in/search?q=paintings+of+" + x ;
+    xmlHttp.send(null);*/
+
+  }
+
+
+ </script>
+
+</head>
+
+<body>
+<div class="div">
+ <h1 class="art">ART</h1>
+ <h2 class="heading">Art is not imitation,but illusion</h2>
+ <!--<a> href="https://www.google.co.in">Search for Paintings of </a> -->
+
+<p id="para">What style of paintings are you looking for? </p>
+
+<center>
+   Paintings of : <input type="search" class="shadow" id="shadows" placeholder="Search for paintings..."  size="70" ><br/>
+   <button onclick="Myfunction()" class="button" id="buttons" > Search</button>
+</center><!-- write java code here-->
+
+<!--<img src="img.jpeg" alt="unloaded image" width="104" height="142">-->
+
+<p id="para2"> </p>
+
+ <?php
+        echo "Hello World!";
+ ?>
+
+</div>
+<img src="tim.jpg" style="filter:blur(10px)" class="imageBack">
+</body>
+</html>
